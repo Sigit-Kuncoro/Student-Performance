@@ -55,32 +55,3 @@ if nb_model is not None:
             st.error(f"Terjadi kesalahan saat memproses prediksi: {e}")
 else:
     st.warning("Model belum dimuat. Mohon periksa kembali file model Anda.")
-
-# --- Petunjuk Deployment ---
-st.markdown(
-    """
-    ---
-    ### **Cara Deployment ke Streamlit Cloud via GitHub:**
-
-    1.  **Siapkan Repositori GitHub:**
-        * Buat repositori baru di GitHub Anda (misal: `aplikasi-prediksi-kelulusan`).
-        * Unggah file `app.py` dan `model_gradulation.pkl` ke repositori tersebut.
-        * Pastikan Anda juga memiliki file `requirements.txt` yang berisi daftar pustaka yang digunakan:
-            ```
-            streamlit
-            pandas
-            scikit-learn # Jika model Anda dibuat dengan scikit-learn
-            joblib
-            ```
-
-    2.  **Deployment di Streamlit Cloud:**
-        * Kunjungi [Streamlit Cloud](https://share.streamlit.io/).
-        * Login dengan akun GitHub Anda.
-        * Klik "New app" atau "Deploy an app".
-        * Pilih repositori GitHub tempat Anda menyimpan file aplikasi.
-        * Atur "Main file path" ke `app.py` (atau nama file Python Anda).
-        * Klik "Deploy!".
-
-    Streamlit Cloud akan secara otomatis mengambil kode dari repositori GitHub Anda, menginstal dependensi dari `requirements.txt`, dan menjalankan aplikasi Anda.
-    """
-)
