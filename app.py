@@ -10,7 +10,7 @@ st.write('Aplikasi ini memprediksi apakah seorang mahasiswa akan lulus "Tepat Wa
 @st.cache_data # Cache model agar tidak dimuat ulang setiap kali aplikasi berjalan
 def load_model():
     try:
-        model = joblib.load('Student-Performance/model_graduation.pkl')
+        model = joblib.load('model_graduation.pkl')
         return model
     except FileNotFoundError:
         st.error("File model 'model_gradulation' tidak ditemukan. Pastikan model berada di direktori yang sama.")
